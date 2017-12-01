@@ -33,7 +33,7 @@ return [
     'Guests can not disconnect accounts' => 'Los invitados no pueden desconectar las cuentas',
     'ID' => 'Código',
     'Instructions to reset your password have been sent' => 'Las instrucciones para restablecer la contraseña han sido enviado',
-    'Invalid key' => 'Key inválida',
+    'Invalid key' => 'Llave inválida',
     'Keychain' => 'Llavero',
     'Language' => 'Idioma',
     'Linking social network accounts (can be several) to your account will allow you to enter in a single click.' => 'La vinculación de cuentas de redes sociales (pueden ser varios) a su cuenta le permitirá entrar en un solo clic',

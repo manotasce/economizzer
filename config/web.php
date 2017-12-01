@@ -9,11 +9,12 @@ $config = [
         'log',
         [
             'class' => 'app\components\LanguageSelector',
-            'supportedLanguages' => ['en', 'pt-br', 'ru', 'ko'],
+            'supportedLanguages' => ['en','es','pt-br', 'ru', 'ko'],
         ],
     ],
     //'defaultRoute' => 'cashbook/index',
-    'sourceLanguage' => 'en-US',
+    'language'=>'es-ES',
+    'sourceLanguage' => 'en-Us',
     'components' => [
         // 'formatter' => [
         //     'class' => 'yii\i18n\formatter',
@@ -83,17 +84,20 @@ $config = [
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
             'clients' => [
+                /*
                 'google' => [
                     'class' => 'yii\authclient\clients\Google',
                     'clientId' => '',
                     'clientSecret' => '',
                 ],
+
                 'facebook' => [
                     'class' => 'yii\authclient\clients\Facebook',
                     'clientId' => '',
                     'clientSecret' => '',
                     'scope' => 'email',
                 ],
+                */
             ]
         ],
         'assetManager' => [

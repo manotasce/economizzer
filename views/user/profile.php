@@ -31,7 +31,8 @@ $this->title = Yii::t('user', 'Profile');
     <?= $form->field($profile, 'full_name') ?>
 
     <?php echo $form->field($profile, 'language')->dropDownList([
-        'en' => Yii::t('app', 'English USA'), 
+        'en' => Yii::t('app', 'English USA'),
+        'es' => Yii::t('app', 'Español LatinoAmérica'),
         'pt' => Yii::t('app', 'Brazilian Portuguese'), 
         'ru' => Yii::t('app', 'Russian'), 
         'ko' => Yii::t('app', 'Korean'), 
@@ -44,6 +45,7 @@ $this->title = Yii::t('user', 'Profile');
 
     <?php echo $form->field($profile, 'currencycode')->dropDownList([
         'USD' => Yii::t('app', 'United States Dollar'),
+        'COP' => Yii::t('app','Peso Colombiano'),
         'BRL' => Yii::t('app', 'Brazil Real'),
         'EUR' => Yii::t('app', 'Euro'),
         'RUB' => Yii::t('app', 'Russia Ruble'), 

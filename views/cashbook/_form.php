@@ -11,7 +11,8 @@ use kartik\money\MaskMoney;
 <div class="cashbook-form">
 
 <div class="col-md-8">
-    <?php $form = ActiveForm::begin([
+    <?php 
+        $form = ActiveForm::begin([
         'id' => 'cashbookform',
         'options' => [
             'enctype'=>'multipart/form-data',
@@ -38,34 +39,51 @@ use kartik\money\MaskMoney;
     ?>
 
     <?php
-        echo DatePicker::widget([
-            'model' => $model,
-            'form' => $form,
+        echo $form->field($model,'date')->widget(DatePicker::className(),
+            [
+           
             'attribute' => 'date',
             'type' => DatePicker::TYPE_INPUT,
             'size' => 'sm',
             'pluginOptions' => [
-                'autoclose'=>true,
+                'autoclose'=> true,
                 'todayHighlight' => true,
                 'format' => 'yyyy-mm-dd',
             ]
-        ]);
+        ])
+       
+        
     ?>
     
-    <?php 
+    <?php
+    /*
     echo $form->field($model, 'value')->widget(MaskMoney::classname(), [
+        
         'pluginOptions' => [
+            
             //'prefix' => 'R$ ',
             //'suffix' => ' c',
-            'affixesStay' => true,
+            //'affixesStay' => true,
             //'thousands' => '.',
             //'decimal' => ',',
-            'precision' => 2, 
-            'allowZero' => true,
-            'allowNegative' => true,
+            //'precision' => 2, 
+            'allowZero' => false,
+            'allowNegative' => false,
             //'value' => 0.01
-        ],
+        ]
     ]); 
+    */
+    echo $form->field($model,'value')->widget(MaskMoney::classname(),
+            [
+                'options'=> [
+                    'placeholder' =>  'Enter a valid amount...'
+                ],
+                'pluginOptions' => [
+                    'prefix'=>'$'
+
+                ]
+
+            ]);
     ?>
 
     <?=
